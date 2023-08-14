@@ -5,19 +5,55 @@ const alphabet = {
     "offsety": 0
   },
   "A": {
-    "size": 40,
+    "size": 100,
     "offsetx": 0,
-    "offsety": 17
+    "offsety": 0,
+    "start": 115,
+    "stop": 65,
+    "sizeCircleA": 70,
+    "CircleAoffsetX":0,
+    "CircleAoffsetY":-30,
+    "sizeCircleB": 50,
+    "CircleBoffsetX":0,
+    "CircleBoffsetY":-30,
+    "rectX":-50,
+    "rectY":0,
+    "rectW":100,
+    "rectH":50
   },
   "B": {
-    "size": 75,
+    "size": 100,
     "offsetx": 0,
-    "offsety": -70
+    "offsety": 0,
+    "start": 270,
+    "stop":90,
+    "sizeCircleA": 50,
+    "CircleAoffsetX":-25,
+    "CircleAoffsetY":-25,
+    "sizeCircleB": 30,
+    "CircleBoffsetX":25,
+    "CircleBoffsetY":25,
+    "rectX":-50,
+    "rectY":-50,
+    "rectW":50,
+    "rectH":100
   },
   "C": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "size": 100,
+    "offsetx": -30,
+    "offsety": 0,
+    "start": 60,
+    "stop":300,
+    "sizeCircleA": 0,
+    "CircleAoffsetX":50,
+    "CircleAoffsetY":50,
+    "sizeCircleB":0,
+    "CircleBoffsetX":10,
+    "CircleBoffsetY":10,
+    "rectX":0,
+    "rectY":0,
+    "rectW":0,
+    "rectH":0
   },
   "D": {
     "size": 50,
