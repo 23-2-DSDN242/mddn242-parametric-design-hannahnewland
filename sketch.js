@@ -17,23 +17,56 @@ const letterA = {
   "offsetx": 0,
   "offsety": -30,
   "start": 115,
-  "stop": 65
+  "stop": 65,
+  "sizeCircleA": 70,
+  "CircleAoffsetX":0,
+  "CircleAoffsetY":-30,
+  "sizeCircleB": 50,
+  "CircleBoffsetX":0,
+  "CircleBoffsetY":-30,
+  "rectX":-75,
+  "rectY":0,
+  "rectW":150,
+  "rectH":75
+  
+
 }
 
 const letterB = {
   "size": 150,
   "offsetx": 30,
   "offsety": -30,
-  "start": 205,
-  "stop":155
+  "start": 270,
+  "stop":90,
+  "sizeCircleA": 80,
+  "CircleAoffsetX":0,
+  "CircleAoffsetY":-25,
+  "sizeCircleB": 60,
+  "CircleBoffsetX":25,
+  "CircleBoffsetY":25,
+  "rectX":-75,
+  "rectY":-75,
+  "rectW":75,
+  "rectH":150
+
 }
 
 const letterC = {
   "size": 150,
   "offsetx": -30,
   "offsety": 0,
-  "start": 25,
-  "stop":335
+  "start": 60,
+  "stop":300,
+  "sizeCircleA": 0,
+  "CircleAoffsetX":50,
+  "CircleAoffsetY":50,
+  "sizeCircleB":0,
+  "CircleBoffsetX":10,
+  "CircleBoffsetY":10,
+  "rectX":0,
+  "rectY":0,
+  "rectW":0,
+  "rectH":0
 }
 
 const backgroundColor  = "#F2C9E1";
@@ -79,15 +112,28 @@ function drawLetter(posx, posy, letterData) {
 
   let start = radians(letterData["start"]);
   let stop = radians(letterData["stop"]);
+  let sizeCircleA = letterData["sizeCircleA"];
+  let sizeCircleB = letterData["sizeCircleB"];
+  let posAX = posx + letterData["CircleAoffsetX"];
+  let posAY = posy + letterData["CircleAoffsetY"];
+  let posBX = posx + letterData["CircleBoffsetX"];
+  let posBY = posy + letterData["CircleBoffsetY"];
+  let rectX = posx + letterData["rectX"];
+  let rectY = posy + letterData["rectY"];
+  let rectW = letterData["rectW"];
+  let rectH = letterData["rectH"];
 
   // draw two circles
   fill(darkOrange);
   ellipse(posx, posy, 150, 150);
-  rect(posx-75,posy,150,75);
+  
+  rect(rectX,rectY,rectW,rectH);
   fill(lightOrange);
   arc(posx,posy,size2,size2,start,stop);
   fill(White);
-  ellipse(pos2x,pos2y, 50,50);
+  ellipse(posAX,posAY, sizeCircleA);
+  fill(darkOrange);
+  ellipse(posBX,posBY,sizeCircleB);
   
 }
 
