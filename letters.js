@@ -40,7 +40,7 @@ const alphabet = {
   },
   "C": {
     "size": 100,
-    "offsetx": -30,
+    "offsetx": 0,
     "offsety": 0,
     "start": 60,
     "stop":300,

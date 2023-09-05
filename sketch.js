@@ -106,34 +106,34 @@ function draw () {
 
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = posx + letterData["offsetx"];
-  let pos2y = posy + letterData["offsety"];
+  // let size2 = letterData["size"];
+  // let pos2x = posx + letterData["offsetx"];
+  // let pos2y = posy + letterData["offsety"];
 
-  let start = radians(letterData["start"]);
-  let stop = radians(letterData["stop"]);
-  let sizeCircleA = letterData["sizeCircleA"];
-  let sizeCircleB = letterData["sizeCircleB"];
-  let posAX = posx + letterData["CircleAoffsetX"];
-  let posAY = posy + letterData["CircleAoffsetY"];
-  let posBX = posx + letterData["CircleBoffsetX"];
-  let posBY = posy + letterData["CircleBoffsetY"];
-  let rectX = posx + letterData["rectX"];
-  let rectY = posy + letterData["rectY"];
-  let rectW = letterData["rectW"];
-  let rectH = letterData["rectH"];
+  // let start = radians(letterData["start"]);
+  // let stop = radians(letterData["stop"]);
+  // let sizeCircleA = letterData["sizeCircleA"];
+  // let sizeCircleB = letterData["sizeCircleB"];
+  // let posAX = posx + letterData["CircleAoffsetX"];
+  // let posAY = posy + letterData["CircleAoffsetY"];
+  // let posBX = posx + letterData["CircleBoffsetX"];
+  // let posBY = posy + letterData["CircleBoffsetY"];
+  // let rectX = posx + letterData["rectX"];
+  // let rectY = posy + letterData["rectY"];
+  // let rectW = letterData["rectW"];
+  // let rectH = letterData["rectH"];
 
-  // draw two circles
-  fill(darkOrange);
-  ellipse(posx, posy, 150, 150);
+  // // draw two circles
+  // fill(darkOrange);
+  // ellipse(posx, posy, 150, 150);
   
-  rect(rectX,rectY,rectW,rectH);
-  fill(lightOrange);
-  arc(posx,posy,size2,size2,start,stop);
-  fill(White);
-  ellipse(posAX,posAY, sizeCircleA);
-  fill(darkOrange);
-  ellipse(posBX,posBY,sizeCircleB);
+  // rect(rectX,rectY,rectW,rectH);
+  // fill(lightOrange);
+  // arc(posx,posy,size2,size2,start,stop);
+  // fill(White);
+  // ellipse(posAX,posAY, sizeCircleA);
+  // fill(darkOrange);
+  // ellipse(posBX,posBY,sizeCircleB);
   
 }
 
