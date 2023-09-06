@@ -13,60 +13,34 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "size": 150,
-  "offsetx": 0,
-  "offsety": -30,
-  "start": 115,
-  "stop": 65,
-  "sizeCircleA": 70,
-  "CircleAoffsetX":0,
-  "CircleAoffsetY":-30,
-  "sizeCircleB": 50,
-  "CircleBoffsetX":0,
-  "CircleBoffsetY":-30,
-  "rectX":-75,
-  "rectY":0,
-  "rectW":150,
-  "rectH":75
+  "xposblock1":0,
+  "yposblock1":0,
+  "xposblock2":-30,
+  "yposblock2":-20,
+  "xposhalfblock1":-15,
+  "yposhalfblock1":0,
+  "xpoint1downfromlefttri1":-15,
+  "ypoint1downfromlefttri1":0,
+  "xpoint2downfromlefttri1":-15,
+  "ypoint2downfromlefttri1":20,
+  "xpoint3downfromlefttri1":-30,
+  "ypoint3downfromlefttri1":0,
+ 
+
   
 
 }
 
 const letterB = {
-  "size": 150,
-  "offsetx": 30,
-  "offsety": -30,
-  "start": 270,
-  "stop":90,
-  "sizeCircleA": 80,
-  "CircleAoffsetX":0,
-  "CircleAoffsetY":-25,
-  "sizeCircleB": 60,
-  "CircleBoffsetX":25,
-  "CircleBoffsetY":25,
-  "rectX":-75,
-  "rectY":-75,
-  "rectW":75,
-  "rectH":150
+"xposblock1":0,
+"yposblock1":0,
 
 }
 
 const letterC = {
-  "size": 150,
-  "offsetx": -30,
-  "offsety": 0,
-  "start": 60,
-  "stop":300,
-  "sizeCircleA": 0,
-  "CircleAoffsetX":50,
-  "CircleAoffsetY":50,
-  "sizeCircleB":0,
-  "CircleBoffsetX":10,
-  "CircleBoffsetY":10,
-  "rectX":0,
-  "rectY":0,
-  "rectW":0,
-  "rectH":0
+  "xposblock1":0,
+"yposblock1":0,
+
 }
 
 const backgroundColor  = "#F2C9E1";
@@ -106,6 +80,21 @@ function draw () {
 
 function drawLetter(posx, posy, letterData) {
   // determine parameters for second circle
+
+  let xposblock1 = posx + letterData["xposblock1"];
+  let yposblock1 = posy + letterData["yposblock1"];
+  let xposblock2 = posx + letterData["xposblock2"];
+  let yposblock2 = posy + letterData["yposblock2"];
+
+  let xposhalfblock1 = posx + letterData ["xposhalfblock1"];
+  let yposhalfblock1 = posy + letterData ["yposhalfblock1"];
+
+  let xpoint1downfromlefttri1 = posx + letterData ["xpoint1downfromlefttri1"];
+  let ypoint1downfromlefttri1 = posy + letterData ["ypoint1downfromlefttri1"];
+  let xpoint2downfromlefttri1 = posx + letterData ["xpoint2downfromlefttri1"];
+  let ypoint2downfromlefttri1 = posy + letterData ["ypoint2downfromlefttri1"];
+  let xpoint3downfromlefttri1 = posx + letterData ["xpoint3downfromlefttri1"];
+  let ypoint3downfromlefttri1 = posy + letterData ["ypoint3downfromlefttri1"];
   // let size2 = letterData["size"];
   // let pos2x = posx + letterData["offsetx"];
   // let pos2y = posy + letterData["offsety"];
@@ -123,9 +112,14 @@ function drawLetter(posx, posy, letterData) {
   // let rectW = letterData["rectW"];
   // let rectH = letterData["rectH"];
 
-  // // draw two circles
-  // fill(darkOrange);
-  // ellipse(posx, posy, 150, 150);
+  fill(darkOrange);
+ rect(xposblock1,yposblock1,30,20);
+ rect(xposblock2,yposblock2,30,20);
+
+
+  fill(lightOrange);
+  rect(xposhalfblock1, yposhalfblock1,15,20);
+  triangle(xpoint1downfromlefttri1,ypoint1downfromlefttri1,xpoint2downfromlefttri1,ypoint2downfromlefttri1,xpoint3downfromlefttri1,ypoint3downfromlefttri1);
   
   // rect(rectX,rectY,rectW,rectH);
   // fill(lightOrange);

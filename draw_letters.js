@@ -26,34 +26,26 @@ function drawLetter(letterData) {
   noStroke();
 
   // determine parameters for second circle
-  let size2 = letterData["size"];
-  let pos2x = 50  + letterData["offsetx"];
-  let pos2y = 150 + letterData["offsety"];
+  
+  let posx = 0  + letterData["xposblock1"];
+  let posy = 180 + letterData["yposblock1"];
 
-  let start = radians(letterData["start"]);
-  let stop = radians(letterData["stop"]);
-  let sizeCircleA = letterData["sizeCircleA"];
-  let sizeCircleB = letterData["sizeCircleB"];
-  let posAX = pos2x + letterData["CircleAoffsetX"];
-  let posAY = pos2y + letterData["CircleAoffsetY"];
-  let posBX = pos2x + letterData["CircleBoffsetX"];
-  let posBY = pos2y + letterData["CircleBoffsetY"];
-  let rectX = pos2x + letterData["rectX"];
-  let rectY = pos2y + letterData["rectY"];
-  let rectW = letterData["rectW"];
-  let rectH = letterData["rectH"];
+  let xposblock1 = posx + letterData["xposblock1"];
+  let yposblock1 = posy + letterData["yposblock1"];
 
   // draw two circles
   fill(darkOrange);
-  ellipse(pos2x, pos2y, 100, 100);
+  // ellipse(pos2x, pos2y, 100, 100);
   
-  rect(rectX,rectY,rectW,rectH);
-  fill(lightOrange);
-  arc(pos2x,pos2y,size2,size2,start,stop);
-  fill(White);
-  ellipse(posAX,posAY, sizeCircleA);
-  fill(darkOrange);
-  ellipse(posBX,posBY,sizeCircleB);
+  // rect(rectX,rectY,rectW,rectH);
+  // fill(lightOrange);
+  // arc(pos2x,pos2y,size2,size2,start,stop);
+  // fill(White);
+  // ellipse(posAX,posAY, sizeCircleA);
+  // fill(darkOrange);
+  // ellipse(posBX,posBY,sizeCircleB);
+
+  rect(xposblock1,yposblock1,30,20);
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
