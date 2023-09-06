@@ -13,34 +13,16 @@ const canvasHeight = 500;
  */
 
 const letterA = {
-  "xposblock1":0,
-  "yposblock1":0,
-  "xposblock2":-30,
-  "yposblock2":-20,
-  "xposhalfblock1":-15,
-  "yposhalfblock1":0,
-  "xpoint1downfromlefttri1":-15,
-  "ypoint1downfromlefttri1":0,
-  "xpoint2downfromlefttri1":-15,
-  "ypoint2downfromlefttri1":20,
-  "xpoint3downfromlefttri1":-30,
-  "ypoint3downfromlefttri1":0,
- 
+  "LblockReverse": yes,
+}
 
+const letterB = {
   
 
 }
 
-const letterB = {
-"xposblock1":0,
-"yposblock1":0,
-
-}
-
 const letterC = {
-  "xposblock1":0,
-"yposblock1":0,
-
+  "LblockReverse": yes,
 }
 
 const backgroundColor  = "#F2C9E1";
@@ -51,6 +33,8 @@ const lightOrange  = "#F0A10B";
 const White = "#90e0tf";
 
 function setup () {
+
+  angleMode(DEGREES);
   // create the drawing canvas, save the canvas element
   main_canvas = createCanvas(canvasWidth, canvasHeight);
   main_canvas.parent('canvasContainer');
@@ -58,7 +42,7 @@ function setup () {
   // color/stroke setup
   stroke(strokeColor);
   strokeWeight(4);
-  noStroke();
+  
 
   // with no animation, redrawing the screen is not necessary
   noLoop();
@@ -79,55 +63,47 @@ function draw () {
 }
 
 function drawLetter(posx, posy, letterData) {
+
+ 
   // determine parameters for second circle
 
-  let xposblock1 = posx + letterData["xposblock1"];
-  let yposblock1 = posy + letterData["yposblock1"];
-  let xposblock2 = posx + letterData["xposblock2"];
-  let yposblock2 = posy + letterData["yposblock2"];
-
-  let xposhalfblock1 = posx + letterData ["xposhalfblock1"];
-  let yposhalfblock1 = posy + letterData ["yposhalfblock1"];
-
-  let xpoint1downfromlefttri1 = posx + letterData ["xpoint1downfromlefttri1"];
-  let ypoint1downfromlefttri1 = posy + letterData ["ypoint1downfromlefttri1"];
-  let xpoint2downfromlefttri1 = posx + letterData ["xpoint2downfromlefttri1"];
-  let ypoint2downfromlefttri1 = posy + letterData ["ypoint2downfromlefttri1"];
-  let xpoint3downfromlefttri1 = posx + letterData ["xpoint3downfromlefttri1"];
-  let ypoint3downfromlefttri1 = posy + letterData ["ypoint3downfromlefttri1"];
-  // let size2 = letterData["size"];
-  // let pos2x = posx + letterData["offsetx"];
-  // let pos2y = posy + letterData["offsety"];
-
-  // let start = radians(letterData["start"]);
-  // let stop = radians(letterData["stop"]);
-  // let sizeCircleA = letterData["sizeCircleA"];
-  // let sizeCircleB = letterData["sizeCircleB"];
-  // let posAX = posx + letterData["CircleAoffsetX"];
-  // let posAY = posy + letterData["CircleAoffsetY"];
-  // let posBX = posx + letterData["CircleBoffsetX"];
-  // let posBY = posy + letterData["CircleBoffsetY"];
-  // let rectX = posx + letterData["rectX"];
-  // let rectY = posy + letterData["rectY"];
-  // let rectW = letterData["rectW"];
-  // let rectH = letterData["rectH"];
-
-  fill(darkOrange);
- rect(xposblock1,yposblock1,30,20);
- rect(xposblock2,yposblock2,30,20);
-
-
-  fill(lightOrange);
-  rect(xposhalfblock1, yposhalfblock1,15,20);
-  triangle(xpoint1downfromlefttri1,ypoint1downfromlefttri1,xpoint2downfromlefttri1,ypoint2downfromlefttri1,xpoint3downfromlefttri1,ypoint3downfromlefttri1);
+  let LblockReverse = letterData ["LblockReverse"];
   
-  // rect(rectX,rectY,rectW,rectH);
-  // fill(lightOrange);
-  // arc(posx,posy,size2,size2,start,stop);
-  // fill(White);
-  // ellipse(posAX,posAY, sizeCircleA);
-  // fill(darkOrange);
-  // ellipse(posBX,posBY,sizeCircleB);
+  
+fill(lightOrange);
+
+
+beginShape();
+vertex(posx +33, posy);
+vertex(posx + 66, posy);
+vertex(posx+66,posy-100);
+vertex(posx+33, posy-100);
+vertex(posx+33, posy-66);
+vertex(posx,posy-66);
+vertex(posx,posy-33);
+vertex(posx+33,posy-33);
+vertex(posx+33,posy);
+endShape();
+fill(darkOrange);
+
+if(LblockReverse == yes){
+
+ beginShape();
+vertex(posx-33,posy);
+vertex(posx-33,posy-100);
+vertex(posx+33,posy-100);
+vertex(posx+33,posy-66);
+vertex(posx,posy-66);
+vertex(posx,posy);
+vertex(posx-33,posy);
+endShape();
+}
+
+; 
+
+
+  
+
   
 }
 
