@@ -5,7 +5,7 @@ const alphabet = {
     "offsety": 0
   },
   "A": {
-    "Lblock": 1,
+    "ReverseLblock": 1,
     "Tblock": 1, 
   },
   "B": {
@@ -15,7 +15,7 @@ const alphabet = {
     
   },
   "C": {
-    "Lblock": 1,
+    "ReverseLblock": 1,
     "PosX1by1": 67,
     "PosY1by1": 100,
     "block2by1": 2,
@@ -29,7 +29,7 @@ const alphabet = {
   },
   "E": {
   "Tblock": 2,
-  "ReverseLblock":4,
+  "Lblock":4,
   },
   "F": {
     "PosX4by1":0,
@@ -45,7 +45,7 @@ const alphabet = {
     "block2by1": 1,
     "PosX2by1": 66,
     "PosY2by1": 100,
-    "ReverseLblock":2,
+    "Lblock":2,
   },
   "H": {
     "Tblock": 3,
@@ -81,10 +81,11 @@ const alphabet = {
   },
   "M": {
     "Tblock": 3,
-    "ReverseLblock":1,
+    "Lblock":1,
+    "Triangle": 1,
   },
   "N": {
-  "Lblock":1,
+  "ReverseLblock":1,
   "block2by1": 1,
   "PosX2by1": 66,
   "PosY2by1": 133,
@@ -93,62 +94,72 @@ const alphabet = {
   },
 
   "O": {
-    "ReverseLblock": 5,
+    "Lblock": 5,
   },
   "P": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+   "SfromRightBlock": 1,
+   "Multiple1by1s": 3,
+   "block2by1": 1,
+  "PosX2by1": 66,
+  "PosY2by1": 100,
   },
   "Q": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Tblock":4,
+    "Lblock":4,
+    "PosX1by1": 33,
+  "PosY1by1": 133,
+
   },
   "R": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Lblock":4,
+    "PosX1by1": 0,
+  "PosY1by1": 166,
   },
   "S": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "SfromLeftBlock": 2,
+    "block2by1": 2,
+    "PosX2by1": 0,
+    "PosY2by1": 166,
   },
   "T": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Tblock": 5,
+    "block2by1": 1,
+    "PosX2by1": 33,
+    "PosY2by1": 133,
   },
   "U": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "ReverseLblock": 3,
+    "block2by1": 1,
+    "PosX2by1": 0,
+    "PosY2by1": 133,
+    "PosX1by1": 0,
+    "PosY1by1": 100,
   },
   "V": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Lblock":3,
+    "block2by1": 1,
+    "PosX2by1": 66,
+    "PosY2by1": 100,
   },
   "W": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Tblock":3,
+    "ReverseLblock":3,
+    "Triangle": 2,
   },
   "X": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Multiple1by1s":4,
   },
   "Y": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "Lblock":2,
+    "ReverseLblock":4,
+    "PosX1by1": 66,
+    "PosY1by1": 100,
   },
   "Z": {
-    "size": 50,
-    "offsetx": 15,
-    "offsety": 0
+    "SfromRightBlock": 2,
+    "block2by1": 2,
+    "PosX2by1": 33,
+    "PosY2by1": 166,
   },
   "0": {
     "size": 40,

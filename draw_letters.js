@@ -1,17 +1,12 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#F2C9E1";
+var systemBackgroundColor = "#90e0tf";
 var systemLineColor = "#03045e";
 var systemBoxColor = "#00c800";
 
 /* internal constants */
-// const darkBlue  = "#0077b6";
-// const lightBlue  = "#90e0ef";
-// const strokeColor  = "#03045e";
 
- //const darkOrange  = "#E94D29";
-// const lightOrange  = "#F0A10B";
-// const White = "#90e0tf";
-const backgroundColor  = "#F2C9E1";
+ const White = "#90e0tf";
+const backgroundColor  = "#90e0tf";
 const strokeColor      = "#000000";
 
 const SfromRightBlockFill = "#E43430"; //red
@@ -43,9 +38,9 @@ function drawLetter(letterData) {
   let posx = 0;
   let posy = 0;
 
-  let Lblock = letterData ["Lblock"];
-  let Tblock = letterData ["Tblock"];
   let ReverseLblock = letterData ["ReverseLblock"];
+  let Tblock = letterData ["Tblock"];
+  let Lblock = letterData ["Lblock"];
   let PosX4by1 = posx + letterData ["PosX4by1"];
   let PosX2by2 = posx + letterData ["PosX2by2"];
   let PosY2by2 = posy + letterData ["PosY2by2"];
@@ -57,6 +52,7 @@ function drawLetter(letterData) {
   let Multiple1by1s = letterData ["Multiple1by1s"];
   let SfromLeftBlock = letterData ["SfromLeftBlock"];
   let SfromRightBlock = letterData ["SfromRightBlock"];
+  let Triangle = letterData ["Triangle"];
   
 
   fill(TBlockFill);
@@ -100,14 +96,41 @@ endShape();
   vertex(posx,posy+200);
   endShape();
 
+} else if (Tblock == 4){
+  beginShape();
+  vertex(posx+66, posy+233);
+  vertex(posx+66, posy+133);
+  vertex(posx+100,posy+133);
+  vertex(posx+100, posy+166);
+  vertex(posx+133, posy+166);
+  vertex(posx+133,posy+200);
+  vertex(posx+100,posy+200);
+  vertex(posx+100,posy+233);
+  vertex(posx+66,posy+233);
+  endShape();
+
+} else if (Tblock == 5){
+  beginShape();
+  vertex(posx, posy+133);
+  vertex(posx, posy+100);
+  vertex(posx+33,posy+100);
+  vertex(posx+33, posy+66);
+  vertex(posx+66, posy+66);
+  vertex(posx+66,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+133);
+  vertex(posx,posy+133);
+  endShape();
+
+
 }
 
 fill(TwobyTwoBlockFill);
 rect(PosX2by2, PosY2by2, 66,66);
 
-fill(LBlockFill);
+fill(ReverseLBlockFill);
 
-if(Lblock == 1){
+if(ReverseLblock == 1){
   
  beginShape();
 vertex(posx,posy+200);
@@ -118,7 +141,7 @@ vertex(posx+33,posy+133);
 vertex(posx+33,posy+200);
 vertex(posx,posy+200);
 endShape();
-} else if (Lblock == 2){
+} else if (ReverseLblock == 2){
 
   beginShape();
   vertex(posx,posy+133);
@@ -129,7 +152,7 @@ endShape();
   vertex(posx+66,posy+133);
   vertex(posx,posy+133);
   endShape();
-}else if (Lblock == 3){
+}else if (ReverseLblock == 3){
 
   beginShape();
   vertex(posx+33,posy+200);
@@ -141,23 +164,23 @@ endShape();
   vertex(posx+33,posy+200);
   endShape();
 
-}else if (Lblock == 4){
+}else if (ReverseLblock == 4){
   beginShape();
-  vertex(posx,posy+200);
-  vertex(posx,posy+133);
+  vertex(posx,posy+166);
+  vertex(posx,posy+100);
+  vertex(posx+33,posy+100);
   vertex(posx+33,posy+133);
-  vertex(posx+33,posy+166);
+  vertex(posx+100,posy+133);
   vertex(posx+100,posy+166);
-  vertex(posx+100,posy+200);
-  vertex(posx,posy+200);
+  vertex(posx,posy+166);
   endShape();
 
 
 }
 
-fill(ReverseLBlockFill);
+fill(LBlockFill);
 
-if(ReverseLblock == 1){
+if(Lblock == 1){
 
   beginShape();
   vertex(posx+33,posy+133);
@@ -168,7 +191,7 @@ if(ReverseLblock == 1){
   vertex(posx+66,posy+133);
   vertex(posx+33,posy+133);
   endShape();
-} else if (ReverseLblock == 2){
+} else if (Lblock == 2){
   beginShape();
   vertex(posx,posy+233);
   vertex(posx,posy+200);
@@ -179,7 +202,7 @@ if(ReverseLblock == 1){
   vertex(posx,posy+233);
   endShape();
 
-} else if (ReverseLblock == 3){
+} else if (Lblock == 3){
   beginShape();
   vertex(posx,posy+200);
   vertex(posx,posy+100);
@@ -189,7 +212,7 @@ if(ReverseLblock == 1){
   vertex(posx+66,posy+200);
   vertex(posx,posy+200);
   endShape();
-} else if (ReverseLblock == 4){
+} else if (Lblock == 4){
   beginShape();
   vertex(posx,posy+133);
   vertex(posx,posy+100);
@@ -201,7 +224,7 @@ if(ReverseLblock == 1){
   vertex(posx,posy+100);
   endShape();
 
-} else if (ReverseLblock == 5){
+} else if (Lblock == 5){
   beginShape();
   vertex(posx+33,posy+133);
   vertex(posx+33,posy+100);
@@ -240,6 +263,19 @@ rect(33,66,33);
   rect(66,166,33);
   rect(66,66,33);
 
+} else if (Multiple1by1s == 3){
+
+  rect(0,100,33);
+  rect(0,200,33);
+} else if (Multiple1by1s == 4){
+
+  rect(0,100,33);
+  rect(0,166,33);
+  rect(33,133,33);
+  rect(66,100,33);
+  rect(66,166,33);
+
+
 }
 
 fill(TwobyOneBlockFill);
@@ -264,8 +300,59 @@ if(SfromLeftBlock ==1){
   vertex(posx,posy+133);
   vertex(posx,posy+66);
   endShape();
+} else if (SfromLeftBlock  == 2){
+  beginShape();
+  vertex(posx,posy+166);
+  vertex(posx,posy+133);
+  vertex(posx+33,posy+133);
+  vertex(posx+33,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+133);
+  vertex(posx+66,posy+133);
+  vertex(posx+66,posy+166);
+  endShape(CLOSE);
+
+
 }
-  
+
+fill(SfromRightBlockFill);
+
+if (SfromRightBlock == 1){
+beginShape();
+vertex(posx, posy+200);
+vertex(posx, posy+133);
+vertex(posx+33, posy+133);
+vertex(posx+33, posy+100);
+vertex(posx+66,posy+100);
+vertex(posx+66, posy+166);
+vertex(posx+33, posy+166);
+vertex(posx+33, posy+200);
+endShape(CLOSE);
+
+} else if (SfromRightBlock == 2){
+  beginShape();
+  vertex(posx, posy+133);
+  vertex(posx, posy+100);
+  vertex(posx+66, posy+100);
+  vertex(posx+66, posy+133);
+  vertex(posx+100,posy+133);
+  vertex(posx+100, posy+166);
+  vertex(posx+33, posy+166);
+  vertex(posx+33, posy+133);
+  endShape(CLOSE);
+
+}
+  fill(strokeColor);
+  strokeWeight(2);
+  if (Triangle == 1){
+
+    triangle(33,100,49.5,133,66,100);
+
+  } else if (Triangle == 2){
+
+    triangle(33,200,49.5,166,66,200);
+
+  }
 
 }
 
