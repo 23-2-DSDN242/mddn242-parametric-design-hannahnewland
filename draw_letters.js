@@ -370,10 +370,26 @@ endShape(CLOSE);
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
+  
   let new_letter = {};
-  new_letter["size"]    = map(percent, 0, 100, oldObj["size"], newObj["size"]);
-  new_letter["offsetx"] = map(percent, 0, 100, oldObj["offsetx"], newObj["offsetx"]);
-  new_letter["offsety"] = map(percent, 0, 100, oldObj["offsety"], newObj["offsety"]);
+  new_letter["posx"] = map(percent, 0, 100, oldObj["posx"], newObj["posx"]);
+  new_letter["posy"] = map(percent, 0, 100, oldObj["posy"], newObj["posy"]);
+  new_letter["ReverseLblock"] = map(percent, 0, 100, oldObj["ReverseLblock"], newObj["ReverseLblock"]);
+  new_letter["Tblock"] = map(percent, 0, 100, oldObj["Tblock"], newObj["Tblock"]);
+  new_letter["Lblock"] = map(percent, 0, 100, oldObj["Lblock"], newObj["Lblock"]);
+  new_letter["PosX4by1"] = map(percent, 0, 100, oldObj["PosX4by1"], newObj["PosX4by1"]);
+  new_letter["PosX2by2"] = map(percent, 0, 100, oldObj["PosX2by2"], newObj["PosX2by2"]);
+  new_letter["PosY2by2"] = map(percent, 0, 100, oldObj["PosY2by2"], newObj["PosY2by2"]);
+  new_letter["PosX1by1"] = map(percent, 0, 100, oldObj["PosX1by1"], newObj["PosX1by1"]);
+  new_letter["PosY1by1"] = map(percent, 0, 100, oldObj["PosY1by1"], newObj["PosY1by1"]);
+  new_letter["block2by1"] = map(percent, 0, 100, oldObj["block2by1"], newObj["block2by1"]);
+  new_letter["PosX2by1"] = map(percent, 0, 100, oldObj["PosX2by1"], newObj["PosX2by1"]);
+  new_letter["PosY2by1"] = map(percent, 0, 100, oldObj["PosY2by1"], newObj["PosY2by1"]);
+  new_letter["Multiple1by1s"] = map(percent, 0, 100, oldObj["Multiple1by1s"], newObj["Multiple1by1s"]);
+  new_letter["SfromLeftBlock"] = map(percent, 0, 100, oldObj["SfromLeftBlock"], newObj["SfromLeftBlock"]);
+  new_letter["SfromRightBlock"] = map(percent, 0, 100, oldObj["SfromRightBlock"], newObj["SfromRightBlock"]);
+  new_letter["Triangle"] = map(percent, 0, 100, oldObj["Triangle"], newObj["Triangle"]);
+  
   return new_letter;
 }
 
