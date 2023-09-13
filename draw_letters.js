@@ -121,7 +121,17 @@ endShape();
   vertex(posx+100,posy+133);
   vertex(posx,posy+133);
   endShape();
-
+}else if (Tblock == 6){
+  beginShape();
+  vertex(posx, posy+133);
+  vertex(posx, posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100, posy+133);
+  vertex(posx+66, posy+133);
+  vertex(posx+66,posy+166);
+  vertex(posx+33,posy+166);
+  vertex(posx+33,posy+133);
+  endShape(CLOSE);
 
 }
 
@@ -274,6 +284,9 @@ rect(33,66,33);
   rect(33,133,33);
   rect(66,100,33);
   rect(66,166,33);
+} else if (Multiple1by1s == 5){
+rect(66,100,33);
+rect(33,166,33);
 
 
 }
