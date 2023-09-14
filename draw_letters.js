@@ -45,7 +45,7 @@ function drawLetter(letterData) {
    strokeWeight(7);
   
 
-  // determine parameters for second circle
+  // determine parameters
   
   let posx = 0;
   let posy = 0;
@@ -66,6 +66,7 @@ function drawLetter(letterData) {
   let SfromRightBlock = letterData ["SfromRightBlock"];
   let Triangle = letterData ["Triangle"];
   
+// T block Code
 
   fill(TBlockFill);
 if(Tblock == 1){
@@ -146,8 +147,9 @@ endShape();
   endShape(CLOSE);
 }
 
-fill(ReverseLBlockFill);
+// Reverse L Block Code
 
+fill(ReverseLBlockFill);
 if(ReverseLblock == 1){
   
  beginShape();
@@ -193,6 +195,8 @@ endShape();
   vertex(posx,posy+166);
   endShape();
 }
+
+// L Block Code 
 
 fill(LBlockFill);
 
@@ -262,6 +266,8 @@ if(Lblock == 1){
   endShape();
 }
 
+// if statements to keep all parameters in each letter but keeping some invisible.
+
 if (PosY2by2 <=-200){
 push();
 noFill();
@@ -296,6 +302,9 @@ if (PosY1by1 <=-200){
 fill(OnebyOneBlockFill);
 rect(PosX1by1, PosY1by1, 33);
 }
+
+// Code for if there's multiple 1 by 1 blocks
+
 fill(OnebyOneBlockFill);
 if(Multiple1by1s == 1){
 
@@ -324,12 +333,16 @@ rect(33,166,33);
 
 }
 
+// 2 by 1 blocks code
+
 fill(TwobyOneBlockFill);
   if(block2by1 == 1){
     rect(PosX2by1, PosY2by1,33,66);
   }else if (block2by1 == 2){
     rect(PosX2by1, PosY2by1,66,33);
   }
+
+// S shaped block that starts from the top left hand corner
 
 fill(SfromLeftBlockFill);
 
@@ -361,7 +374,7 @@ if(SfromLeftBlock ==1){
 
 
 }
-
+// S shaped block that starts from the top right corner
 fill(SfromRightBlockFill);
 
 if (SfromRightBlock == 1){
@@ -390,6 +403,7 @@ endShape(CLOSE);
 
  }
 
+ // Triangles to make M and W recognisable
 
   fill(strokeColor);
   strokeWeight(2);
@@ -407,16 +421,7 @@ endShape(CLOSE);
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  // if(percent < 50) {
-  //   let draw_scale = map(percent, 0, 50, 1, 0);
-  //   new_letter["draw_scale"] = draw_scale;
-  //   percent = 0;
-  // }
-  // else {
-  //   let draw_scale = map(percent, 50, 100, 0, 1);
-  //   new_letter["draw_scale"] = draw_scale;
-  //   percent = 100;
-  //}
+
 
   if(percent >0){
 
@@ -454,7 +459,6 @@ function interpolate_letter(percent, oldObj, newObj) {
 
 var swapWords = [
   ".TETRIS.",
-  "FALLFALL",
-  ".YOUWIN.",
+  "FALLING", 
   ".WINNER.",
 ]
