@@ -132,84 +132,6 @@ endShape();
   vertex(posx+33,posy+166);
   vertex(posx+33,posy+133);
   endShape(CLOSE);
-
-// }else if (Tblock == 0){
-  push();
-noFill();
-noStroke();
-beginShape();
-vertex(posx +66, posy+200);
-vertex(posx + 100, posy+200);
-vertex(posx+100,posy+100);
-vertex(posx+66, posy+100);
-vertex(posx+66, posy+133);
-vertex(posx+33,posy+133);
-vertex(posx+33,posy+166);
-vertex(posx+66,posy+166);
-vertex(posx+66,posy+200);
-endShape();
-
-beginShape();
-vertex(posx, posy+200);
-vertex(posx, posy+166);
-vertex(posx+33,posy+166);
-vertex(posx+33, posy+133);
-vertex(posx+66, posy+133);
-vertex(posx+66,posy+166);
-vertex(posx+100,posy+166);
-vertex(posx+100,posy+200);
-vertex(posx,posy+200);
-endShape();
-
-beginShape();
-vertex(posx, posy+200);
-vertex(posx, posy+100);
-vertex(posx+33,posy+100);
-vertex(posx+33, posy+133);
-vertex(posx+66, posy+133);
-vertex(posx+66,posy+166);
-vertex(posx+33,posy+166);
-vertex(posx+33,posy+200);
-vertex(posx,posy+200);
-endShape();
-
-beginShape();
-vertex(posx+66, posy+233);
-vertex(posx+66, posy+133);
-vertex(posx+100,posy+133);
-vertex(posx+100, posy+166);
-vertex(posx+133, posy+166);
-vertex(posx+133,posy+200);
-vertex(posx+100,posy+200);
-vertex(posx+100,posy+233);
-vertex(posx+66,posy+233);
-endShape();
-
-beginShape();
-vertex(posx, posy+133);
-vertex(posx, posy+100);
-vertex(posx+33,posy+100);
-vertex(posx+33, posy+66);
-vertex(posx+66, posy+66);
-vertex(posx+66,posy+100);
-vertex(posx+100,posy+100);
-vertex(posx+100,posy+133);
-vertex(posx,posy+133);
-endShape();
-
-beginShape();
-vertex(posx, posy+133);
-vertex(posx, posy+100);
-vertex(posx+100,posy+100);
-vertex(posx+100, posy+133);
-vertex(posx+66, posy+133);
-vertex(posx+66,posy+166);
-vertex(posx+33,posy+166);
-vertex(posx+33,posy+133);
-endShape(CLOSE);
-
-pop();
-
 }
 
 fill(ReverseLBlockFill);
@@ -258,52 +180,6 @@ endShape();
   vertex(posx+100,posy+166);
   vertex(posx,posy+166);
   endShape();
-// } else if (ReverseLblock == 0){
-  push();
-  noFill();
-  noStroke();
-
-  beginShape();
-vertex(posx,posy+200);
-vertex(posx,posy+100);
-vertex(posx+66,posy+100);
-vertex(posx+66,posy+133);
-vertex(posx+33,posy+133);
-vertex(posx+33,posy+200);
-vertex(posx,posy+200);
-endShape();
-
-  beginShape();
-  vertex(posx,posy+133);
-  vertex(posx,posy+100);
-  vertex(posx+100,posy+100);
-  vertex(posx+100,posy+166);
-  vertex(posx+66,posy+166);
-  vertex(posx+66,posy+133);
-  vertex(posx,posy+133);
-  endShape();
-
-  beginShape();
-  vertex(posx+33,posy+200);
-  vertex(posx+33,posy+166);
-  vertex(posx+66,posy+166);
-  vertex(posx+66,posy+100);
-  vertex(posx+100,posy+100);
-  vertex(posx+100,posy+200);
-  vertex(posx+33,posy+200);
-  endShape();
-
-beginShape();
-  vertex(posx,posy+166);
-  vertex(posx,posy+100);
-  vertex(posx+33,posy+100);
-  vertex(posx+33,posy+133);
-  vertex(posx+100,posy+133);
-  vertex(posx+100,posy+166);
-  vertex(posx,posy+166);
-  endShape();
-
-  pop();
 }
 
 fill(LBlockFill);
@@ -372,55 +248,6 @@ if(Lblock == 1){
   vertex(posx+66,posy+200);
   vertex(posx,posy+200);
   endShape();
-
-  
-// } else if (Lblock == 0){
-push();
-noFill();
-noStroke();
-
-beginShape();
-  vertex(posx+33,posy+133);
-  vertex(posx+33,posy+100);
-  vertex(posx+100,posy+100);
-  vertex(posx+100,posy+200);
-  vertex(posx+66,posy+200);
-  vertex(posx+66,posy+133);
-  vertex(posx+33,posy+133);
-  endShape();
-
-  beginShape();
-  vertex(posx,posy+233);
-  vertex(posx,posy+200);
-  vertex(posx+66,posy+200);
-  vertex(posx+66,posy+166);
-  vertex(posx+100,posy+166);
-  vertex(posx+100,posy+233);
-  vertex(posx,posy+233);
-  endShape();
-
-beginShape();
-  vertex(posx,posy+200);
-  vertex(posx,posy+100);
-  vertex(posx+33,posy+100);
-  vertex(posx+33,posy+166);
-  vertex(posx+66,posy+166);
-  vertex(posx+66,posy+200);
-  vertex(posx,posy+200);
-  endShape();
-
-  beginShape();
-  vertex(posx,posy+133);
-  vertex(posx,posy+100);
-  vertex(posx+100,posy+100);
-  vertex(posx+100,posy+133);
-  vertex(posx+33,posy+133);
-  vertex(posx+33,posy+166);
-  vertex(posx,posy+166);
-  vertex(posx,posy+100);
-  endShape();
-
-  pop();
 }
 
 if (PosY2by2 <=-200){
@@ -482,20 +309,7 @@ rect(33,66,33);
 } else if (Multiple1by1s == 5){
 rect(66,100,33);
 rect(33,166,33);
-// }else if (Multiple1by1s == 0){
-push();
-noFill();
-noStroke();
-rect(0,166,33);
-rect(33,66,33);
-rect(66,166,33);
-rect(66,66,33);
-rect(0,100,33);
-rect(0,200,33);
-rect(33,133,33);
-rect(66,100,33);
-rect(33,166,33);
-pop();
+
 }
 
 fill(TwobyOneBlockFill);
@@ -533,34 +347,6 @@ if(SfromLeftBlock ==1){
   endShape(CLOSE);
 
 
-// } else if (SfromLeftBlock == 0){
-
-  push();
-  noFill();
-  noStroke();
-  beginShape();
-  vertex(posx,posy+66);
-  vertex(posx+33,posy+66);
-  vertex(posx+33,posy+100);
-  vertex(posx+66,posy+100);
-  vertex(posx+66,posy+166);
-  vertex(posx+33,posy+166);
-  vertex(posx+33,posy+133);
-  vertex(posx,posy+133);
-  vertex(posx,posy+66);
-  endShape();
-  beginShape();
-  vertex(posx,posy+166);
-  vertex(posx,posy+133);
-  vertex(posx+33,posy+133);
-  vertex(posx+33,posy+100);
-  vertex(posx+100,posy+100);
-  vertex(posx+100,posy+133);
-  vertex(posx+66,posy+133);
-  vertex(posx+66,posy+166);
-  endShape(CLOSE);
-
-  pop();
 
 }
 
@@ -590,32 +376,6 @@ endShape(CLOSE);
   vertex(posx+33, posy+133);
   endShape(CLOSE);
 
-// } else if (SfromRightBlock == 0){
-
-//   push();
-//   noFill();
-//   noStroke();
-//   beginShape();
-// vertex(posx, posy+200);
-// vertex(posx, posy+133);
-// vertex(posx+33, posy+133);
-// vertex(posx+33, posy+100);
-// vertex(posx+66,posy+100);
-// vertex(posx+66, posy+166);
-// vertex(posx+33, posy+166);
-// vertex(posx+33, posy+200);
-// endShape(CLOSE);
-// beginShape();
-//   vertex(posx, posy+133);
-//   vertex(posx, posy+100);
-//   vertex(posx+66, posy+100);
-//   vertex(posx+66, posy+133);
-//   vertex(posx+100,posy+133);
-//   vertex(posx+100, posy+166);
-//   vertex(posx+33, posy+166);
-//   vertex(posx+33, posy+133);
-//   endShape(CLOSE);
-//   pop();
  }
 
 
@@ -629,21 +389,23 @@ endShape(CLOSE);
 
     triangle(33,200,49.5,166,66,200);
 
-  // } else if (Triangle == 0){
-
-  //   push();
-  //   noFill();
-  //   noStroke();
-  //   triangle(33,100,49.5,133,66,100);
-  //   triangle(33,200,49.5,166,66,200);
-  //   pop();
   }
 
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
-  
   let new_letter = {};
+  if(percent < 50) {
+    let draw_scale = map(percent, 0, 50, 1, 0);
+    new_letter["draw_scale"] = draw_scale;
+    percent = 0;
+  }
+  else {
+    let draw_scale = map(percent, 50, 100, 0, 1);
+    new_letter["draw_scale"] = draw_scale;
+    percent = 100;
+  }
+  
   new_letter["posx"] = map(percent, 0, 100, oldObj["posx"], newObj["posx"]);
   new_letter["posy"] = map(percent, 0, 100, oldObj["posy"], newObj["posy"]);
   new_letter["ReverseLblock"] = map(percent, 0, 100, oldObj["ReverseLblock"], newObj["ReverseLblock"]);
