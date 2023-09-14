@@ -133,10 +133,84 @@ endShape();
   vertex(posx+33,posy+133);
   endShape(CLOSE);
 
-}
+// }else if (Tblock == 0){
+  push();
+noFill();
+noStroke();
+beginShape();
+vertex(posx +66, posy+200);
+vertex(posx + 100, posy+200);
+vertex(posx+100,posy+100);
+vertex(posx+66, posy+100);
+vertex(posx+66, posy+133);
+vertex(posx+33,posy+133);
+vertex(posx+33,posy+166);
+vertex(posx+66,posy+166);
+vertex(posx+66,posy+200);
+endShape();
 
-fill(TwobyTwoBlockFill);
-rect(PosX2by2, PosY2by2, 66,66);
+beginShape();
+vertex(posx, posy+200);
+vertex(posx, posy+166);
+vertex(posx+33,posy+166);
+vertex(posx+33, posy+133);
+vertex(posx+66, posy+133);
+vertex(posx+66,posy+166);
+vertex(posx+100,posy+166);
+vertex(posx+100,posy+200);
+vertex(posx,posy+200);
+endShape();
+
+beginShape();
+vertex(posx, posy+200);
+vertex(posx, posy+100);
+vertex(posx+33,posy+100);
+vertex(posx+33, posy+133);
+vertex(posx+66, posy+133);
+vertex(posx+66,posy+166);
+vertex(posx+33,posy+166);
+vertex(posx+33,posy+200);
+vertex(posx,posy+200);
+endShape();
+
+beginShape();
+vertex(posx+66, posy+233);
+vertex(posx+66, posy+133);
+vertex(posx+100,posy+133);
+vertex(posx+100, posy+166);
+vertex(posx+133, posy+166);
+vertex(posx+133,posy+200);
+vertex(posx+100,posy+200);
+vertex(posx+100,posy+233);
+vertex(posx+66,posy+233);
+endShape();
+
+beginShape();
+vertex(posx, posy+133);
+vertex(posx, posy+100);
+vertex(posx+33,posy+100);
+vertex(posx+33, posy+66);
+vertex(posx+66, posy+66);
+vertex(posx+66,posy+100);
+vertex(posx+100,posy+100);
+vertex(posx+100,posy+133);
+vertex(posx,posy+133);
+endShape();
+
+beginShape();
+vertex(posx, posy+133);
+vertex(posx, posy+100);
+vertex(posx+100,posy+100);
+vertex(posx+100, posy+133);
+vertex(posx+66, posy+133);
+vertex(posx+66,posy+166);
+vertex(posx+33,posy+166);
+vertex(posx+33,posy+133);
+endShape(CLOSE);
+
+pop();
+
+}
 
 fill(ReverseLBlockFill);
 
@@ -184,8 +258,52 @@ endShape();
   vertex(posx+100,posy+166);
   vertex(posx,posy+166);
   endShape();
+// } else if (ReverseLblock == 0){
+  push();
+  noFill();
+  noStroke();
 
+  beginShape();
+vertex(posx,posy+200);
+vertex(posx,posy+100);
+vertex(posx+66,posy+100);
+vertex(posx+66,posy+133);
+vertex(posx+33,posy+133);
+vertex(posx+33,posy+200);
+vertex(posx,posy+200);
+endShape();
 
+  beginShape();
+  vertex(posx,posy+133);
+  vertex(posx,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+166);
+  vertex(posx+66,posy+166);
+  vertex(posx+66,posy+133);
+  vertex(posx,posy+133);
+  endShape();
+
+  beginShape();
+  vertex(posx+33,posy+200);
+  vertex(posx+33,posy+166);
+  vertex(posx+66,posy+166);
+  vertex(posx+66,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+200);
+  vertex(posx+33,posy+200);
+  endShape();
+
+beginShape();
+  vertex(posx,posy+166);
+  vertex(posx,posy+100);
+  vertex(posx+33,posy+100);
+  vertex(posx+33,posy+133);
+  vertex(posx+100,posy+133);
+  vertex(posx+100,posy+166);
+  vertex(posx,posy+166);
+  endShape();
+
+  pop();
 }
 
 fill(LBlockFill);
@@ -256,13 +374,90 @@ if(Lblock == 1){
   endShape();
 
   
+// } else if (Lblock == 0){
+push();
+noFill();
+noStroke();
+
+beginShape();
+  vertex(posx+33,posy+133);
+  vertex(posx+33,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+200);
+  vertex(posx+66,posy+200);
+  vertex(posx+66,posy+133);
+  vertex(posx+33,posy+133);
+  endShape();
+
+  beginShape();
+  vertex(posx,posy+233);
+  vertex(posx,posy+200);
+  vertex(posx+66,posy+200);
+  vertex(posx+66,posy+166);
+  vertex(posx+100,posy+166);
+  vertex(posx+100,posy+233);
+  vertex(posx,posy+233);
+  endShape();
+
+beginShape();
+  vertex(posx,posy+200);
+  vertex(posx,posy+100);
+  vertex(posx+33,posy+100);
+  vertex(posx+33,posy+166);
+  vertex(posx+66,posy+166);
+  vertex(posx+66,posy+200);
+  vertex(posx,posy+200);
+  endShape();
+
+  beginShape();
+  vertex(posx,posy+133);
+  vertex(posx,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+133);
+  vertex(posx+33,posy+133);
+  vertex(posx+33,posy+166);
+  vertex(posx,posy+166);
+  vertex(posx,posy+100);
+  endShape();
+
+  pop();
 }
+
+if (PosY2by2 <=-200){
+push();
+noFill();
+noStroke();
+rect(PosX2by2, PosY2by2, 66,66);
+pop();
+} else{
+fill(TwobyTwoBlockFill);
+rect(PosX2by2, PosY2by2, 66,66);
+}
+
+
+if(PosX4by1 <=-2){
+  push();
+noFill();
+noStroke();
+rect(PosX4by1,posy+66,33,133);
+pop();
+}else{
 fill(FourbyOneBlockFill);
 rect(PosX4by1,posy+66,33,133);
+}
 
+if (PosY1by1 <=-200){
+
+  push();
+  noFill();
+  noStroke();
+  rect(PosX1by1, PosY1by1, 33);
+  pop();
+} else {
 fill(OnebyOneBlockFill);
 rect(PosX1by1, PosY1by1, 33);
-
+}
+fill(OnebyOneBlockFill);
 if(Multiple1by1s == 1){
 
 rect(0,166,33);
@@ -287,8 +482,20 @@ rect(33,66,33);
 } else if (Multiple1by1s == 5){
 rect(66,100,33);
 rect(33,166,33);
-
-
+// }else if (Multiple1by1s == 0){
+push();
+noFill();
+noStroke();
+rect(0,166,33);
+rect(33,66,33);
+rect(66,166,33);
+rect(66,66,33);
+rect(0,100,33);
+rect(0,200,33);
+rect(33,133,33);
+rect(66,100,33);
+rect(33,166,33);
+pop();
 }
 
 fill(TwobyOneBlockFill);
@@ -326,6 +533,35 @@ if(SfromLeftBlock ==1){
   endShape(CLOSE);
 
 
+// } else if (SfromLeftBlock == 0){
+
+  push();
+  noFill();
+  noStroke();
+  beginShape();
+  vertex(posx,posy+66);
+  vertex(posx+33,posy+66);
+  vertex(posx+33,posy+100);
+  vertex(posx+66,posy+100);
+  vertex(posx+66,posy+166);
+  vertex(posx+33,posy+166);
+  vertex(posx+33,posy+133);
+  vertex(posx,posy+133);
+  vertex(posx,posy+66);
+  endShape();
+  beginShape();
+  vertex(posx,posy+166);
+  vertex(posx,posy+133);
+  vertex(posx+33,posy+133);
+  vertex(posx+33,posy+100);
+  vertex(posx+100,posy+100);
+  vertex(posx+100,posy+133);
+  vertex(posx+66,posy+133);
+  vertex(posx+66,posy+166);
+  endShape(CLOSE);
+
+  pop();
+
 }
 
 fill(SfromRightBlockFill);
@@ -354,7 +590,35 @@ endShape(CLOSE);
   vertex(posx+33, posy+133);
   endShape(CLOSE);
 
-}
+// } else if (SfromRightBlock == 0){
+
+//   push();
+//   noFill();
+//   noStroke();
+//   beginShape();
+// vertex(posx, posy+200);
+// vertex(posx, posy+133);
+// vertex(posx+33, posy+133);
+// vertex(posx+33, posy+100);
+// vertex(posx+66,posy+100);
+// vertex(posx+66, posy+166);
+// vertex(posx+33, posy+166);
+// vertex(posx+33, posy+200);
+// endShape(CLOSE);
+// beginShape();
+//   vertex(posx, posy+133);
+//   vertex(posx, posy+100);
+//   vertex(posx+66, posy+100);
+//   vertex(posx+66, posy+133);
+//   vertex(posx+100,posy+133);
+//   vertex(posx+100, posy+166);
+//   vertex(posx+33, posy+166);
+//   vertex(posx+33, posy+133);
+//   endShape(CLOSE);
+//   pop();
+ }
+
+
   fill(strokeColor);
   strokeWeight(2);
   if (Triangle == 1){
@@ -365,6 +629,14 @@ endShape(CLOSE);
 
     triangle(33,200,49.5,166,66,200);
 
+  // } else if (Triangle == 0){
+
+  //   push();
+  //   noFill();
+  //   noStroke();
+  //   triangle(33,100,49.5,133,66,100);
+  //   triangle(33,200,49.5,166,66,200);
+  //   pop();
   }
 
 }
