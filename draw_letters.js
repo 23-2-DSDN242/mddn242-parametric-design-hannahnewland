@@ -1,6 +1,6 @@
 /* these are optional special variables which will change the system */
-var systemBackgroundColor = "#90e0tf";
-var systemLineColor = "#03045e";
+var systemBackgroundColor = "#000000";
+var systemLineColor = "#90e0tf";
 var systemBoxColor = "#00c800";
 
 /* internal constants */
@@ -28,9 +28,21 @@ const FourbyOneBlockFill = "#ED6D9B" //pink
  * from (0,0) to (100, 200)
  */
 function drawLetter(letterData) {
+
+  push();
+
+  if('draw_scale' in letterData) {
+    scale(letterData['draw_scale']);
+  }
+
+  if ('draw_falling' in letterData){
+
+    translate(0,letterData['draw_falling']);
+
+  }
   // color/stroke setup
   stroke(strokeColor);
-   strokeWeight(4);
+   strokeWeight(7);
   
 
   // determine parameters for second circle
@@ -390,20 +402,33 @@ endShape(CLOSE);
     triangle(33,200,49.5,166,66,200);
 
   }
-
+ pop();
 }
 
 function interpolate_letter(percent, oldObj, newObj) {
   let new_letter = {};
-  if(percent < 50) {
-    let draw_scale = map(percent, 0, 50, 1, 0);
-    new_letter["draw_scale"] = draw_scale;
-    percent = 0;
-  }
-  else {
-    let draw_scale = map(percent, 50, 100, 0, 1);
-    new_letter["draw_scale"] = draw_scale;
+  // if(percent < 50) {
+  //   let draw_scale = map(percent, 0, 50, 1, 0);
+  //   new_letter["draw_scale"] = draw_scale;
+  //   percent = 0;
+  // }
+  // else {
+  //   let draw_scale = map(percent, 50, 100, 0, 1);
+  //   new_letter["draw_scale"] = draw_scale;
+  //   percent = 100;
+  //}
+
+  if(percent >0){
+
+    let draw_falling = map(percent, 0,100, -300,0);
+    new_letter["draw_falling"] = draw_falling;
     percent = 100;
+  } else if (percent < 0) {
+    let draw_scale = map(percent, 0, 30, 1, 0);
+      new_letter["draw_scale"] = draw_scale;
+      percent = 0;
+  
+  
   }
   
   new_letter["posx"] = map(percent, 0, 100, oldObj["posx"], newObj["posx"]);
@@ -428,7 +453,8 @@ function interpolate_letter(percent, oldObj, newObj) {
 }
 
 var swapWords = [
-  "ABBAABBA",
-  "CAB?CAB?",
-  "BAAAAAAA"
+  ".TETRIS.",
+  "FALLFALL",
+  ".YOUWIN.",
+  ".WINNER.",
 ]
